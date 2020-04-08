@@ -7,6 +7,8 @@ class PlayState extends FlxState
 	var text = new flixel.text.FlxText(0, 0, 0, "Hello World", 64);
 	var xDir=1;
 	var yDir=1;
+
+	var player:Hero = new Hero();
 	override public function create()
 	{
 		super.create();
@@ -16,6 +18,7 @@ class PlayState extends FlxState
 		text.screenCenter();
 		text.moves = true;
 		add(text);
+		add(player);
 	}
 
 	override public function update(elapsed:Float)
